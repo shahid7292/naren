@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import {
+  Button,
   Center,
   Heading,
   Icon,
@@ -11,6 +12,7 @@ import {
   Textarea,
   VStack,
 } from "@chakra-ui/react";
+import { BUTTON_VARIANTS } from "@/theme/components/button";
 import { HEADING_VARIANTS } from "@/theme/components/heading";
 import { INPUT_VARIANTS } from "@/theme/components/input";
 import { CONTACT_LIST } from "../contact.constants";
@@ -46,6 +48,9 @@ const ContactForm = () => {
           variant={INPUT_VARIANTS.FILLED}
         />
         <Textarea placeholder="Message" variant={INPUT_VARIANTS.FILLED} />
+        <Button size="lg" variant={BUTTON_VARIANTS.BRAND}>
+          SEND MESSAGE
+        </Button>
       </Stack>
     </Stack>
   );
